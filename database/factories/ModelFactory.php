@@ -21,6 +21,8 @@ $factory->define(Profile\User::class, function (Faker\Generator $faker) {
         'city' => $faker->city,
         'phone' => $faker->phoneNumber,
         'website' => $faker->url,
+        'image' =>  'uploads/' . $faker->image('public/uploads', 188, 188, null, false),
+        'cover_image' => 'uploads/' . $faker->image('public/uploads', 817, 240, null, false),
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];
