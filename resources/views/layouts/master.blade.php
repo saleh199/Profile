@@ -7,6 +7,7 @@
     <title>User Profile</title>
 
     <!-- Referencing Bootstrap CSS that is hosted locally -->
+    <?php echo Html::style('css/font-awesome.min.css'); ?>
     <?php echo Html::style('css/bootstrap.min.css') ?>
     <?php echo Html::style('css/theme.min.css') ?>
 </head>

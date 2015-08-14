@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+    <div class="vd_title-section clearfix">
+        <div class="vd_panel-header no-subtitle">
+            <h1>User Profile Page</h1>
+        </div>
+    </div>
     <div class="vd_content-section clearfix">
         <div class="row">
             <div class="col-sm-3">
@@ -19,14 +24,6 @@
                             <table class="table table-striped table-hover">
                                 <tbody>
                                 <tr>
-                                    <td style="width:60%;">Status</td>
-                                    <td><span class="label label-success">Active</span></td>
-                                </tr>
-                                <tr>
-                                    <td>User Rating</td>
-                                    <td><i class="fa fa-star vd_yellow fa-fw"></i><i class="fa fa-star vd_yellow fa-fw"></i><i class="fa fa-star vd_yellow fa-fw"></i><i class="fa fa-star vd_yellow fa-fw"></i><i class="fa fa-star vd_yellow fa-fw"></i></td>
-                                </tr>
-                                <tr>
                                     <td>Member Since</td>
                                     <td> Jan 07, 2014 </td>
                                 </tr>
@@ -43,9 +40,6 @@
                     <ul class="nav nav-tabs widget">
                         <li class="active"> <a data-toggle="tab" href="#profile-tab"> Profile <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
                         <li> <a data-toggle="tab" href="#projects-tab"> Projects <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
-                        <li> <a data-toggle="tab" href="#photos-tab"> Photos <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
-                        <li> <a data-toggle="tab" href="#friends-tab"> Friends <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
-                        <li> <a data-toggle="tab" href="#groups-tab"> Groups <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="profile-tab" class="tab-pane active">
@@ -55,22 +49,15 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="row mgbt-xs-0">
-                                            <label class="col-xs-5 control-label">First Name:</label>
-                                            <div class="col-xs-7 controls">Mariah</div>
-                                            <!-- col-sm-10 -->
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row mgbt-xs-0">
-                                            <label class="col-xs-5 control-label">Last Name:</label>
-                                            <div class="col-xs-7 controls">Caraiban</div>
+                                            <label class="col-xs-5 control-label">Name:</label>
+                                            <div class="col-xs-7 controls">Saleh Saiid</div>
                                             <!-- col-sm-10 -->
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="row mgbt-xs-0">
                                             <label class="col-xs-5 control-label">User Name:</label>
-                                            <div class="col-xs-7 controls">Mariah</div>
+                                            <div class="col-xs-7 controls">Saleh</div>
                                             <!-- col-sm-10 -->
                                         </div>
                                     </div>
@@ -99,13 +86,6 @@
                                         <div class="row mgbt-xs-0">
                                             <label class="col-xs-5 control-label">Birthday:</label>
                                             <div class="col-xs-7 controls">Jan 22, 1984</div>
-                                            <!-- col-sm-10 -->
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row mgbt-xs-0">
-                                            <label class="col-xs-5 control-label">Interests:</label>
-                                            <div class="col-xs-7 controls">Basketball, Web, Design, etc.</div>
                                             <!-- col-sm-10 -->
                                         </div>
                                     </div>
