@@ -36,6 +36,9 @@
             </div>
 
             <div class="col-sm-9">
+                <div class="cover-image">
+                    <img src="#" width="100%" height="240px">
+                </div>
                 <div class="tabs widget">
                     <ul class="nav nav-tabs widget">
                         <li class="active"> <a data-toggle="tab" href="#profile-tab"> Profile <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
