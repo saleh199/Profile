@@ -22,5 +22,9 @@
 
 <!-- Referencing Bootstrap JS that is hosted locally -->
 <?php echo Html::script('js/bootstrap.min.js'); ?>
+<?php echo Html::script('js/app.js'); ?>
+<script>
+    app.init();
+</script>
 </body>
 </html>

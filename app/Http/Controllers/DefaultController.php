@@ -17,6 +17,7 @@ class DefaultController extends Controller
      */
     public function index()
     {
+        // Get only one user (ID: 1)
         $user = User::find(1);
 
         return view('profile', [ 'user' => $user ]);
