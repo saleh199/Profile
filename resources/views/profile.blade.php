@@ -45,16 +45,16 @@
                                     <input type="hidden" name="id">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label class="control-label">Name</label>
+                                            <label class="control-label">Name <span class="vd_red">*</span></label>
                                             <div class="controls">
-                                                <input type="text" name="name" placeholder="Name">
+                                                <input type="text" name="name" placeholder="Name" required>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label class="control-label">Email</label>
+                                            <label class="control-label">Email <span class="vd_red">*</span></label>
                                             <div class="controls">
-                                                <input type="email" name="email" placeholder="Email">
+                                                <input type="email" name="email" placeholder="Email" required>
                                             </div>
                                         </div>
                                     </div>

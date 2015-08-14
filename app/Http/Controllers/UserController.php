@@ -4,6 +4,7 @@ namespace Profile\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Input;
 use Profile\User;
 use Profile\Http\Requests;
 use Profile\Http\Controllers\Controller;
@@ -74,7 +75,21 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        if($user === null){
+            return response()->json(['error' => 'Not Found User'])->setStatusCode(400);
+        }
+
+        $this->validate($request, [
+            'name'  => 'required',
+            'email' => 'required',
+        ]);
+
+        $user->update($request->all());
+
+        return response()->json(['result' => 'ok']);
+
     }
 
     /**

@@ -18,6 +18,7 @@ app = (function(config, $){
 
             $('#saveBtn').click(function(){
                 var $btn = $(this).button('loading');
+                $('#profileForm *').removeClass('required vd_bd-red');
 
                 $.ajax({
                     url: config.base_url + 'users/' + $('input[name="currentId"]').val(),
@@ -27,6 +28,16 @@ app = (function(config, $){
                     dataType: 'json',
                     beforeSend: function (xhr) {
                         $btn.button('loading');
+                    },
+                    error: function(xhr, status){
+                        if(status = 400){
+                            alert('Not Found User');
+                        } else {
+                            var errors = xhr.responseJSON;
+                            $.each(errors, function(index, value){
+                                $('input[name="'+index+'"').toggleClass('required vd_bd-red');
+                            });
+                        }
                     }
                 }).done(function(data){
                     // hide edit profile
