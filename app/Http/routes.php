@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'DefaultController@index');
-Route::resource('user', 'UserController');
+Route::resource('users', 'UserController');

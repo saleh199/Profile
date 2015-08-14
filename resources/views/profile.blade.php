@@ -40,20 +40,21 @@
                     </ul>
                     <div class="tab-content">
                         <div id="profile-tab" class="tab-pane active">
-                            <div id="profileForm" class="collapse pd-20">
-                                <form class="form-horizontal" action="#" role="form">
+                            <div id="profileEdit" class="collapse pd-20">
+                                <form id="profileForm" class="form-horizontal" action="#" role="form">
+                                    <input type="hidden" name="id">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Name</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="Name">
+                                                <input type="text" name="name" placeholder="Name">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <label class="control-label">Email</label>
                                             <div class="controls">
-                                                <input type="email" placeholder="Email">
+                                                <input type="email" name="email" placeholder="Email">
                                             </div>
                                         </div>
                                     </div>
@@ -62,14 +63,14 @@
                                         <div class="col-md-6">
                                             <label class="control-label">Country</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="Country">
+                                                <input type="text" name="country" placeholder="Country">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <label class="control-label">City</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="City">
+                                                <input type="text" name="city" placeholder="City">
                                             </div>
                                         </div>
                                     </div>
@@ -78,14 +79,14 @@
                                         <div class="col-md-6">
                                             <label class="control-label">Birthday</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="Birthday">
+                                                <input type="text" name="birthdate" placeholder="Birthday">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <label class="control-label">Website</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="Website">
+                                                <input type="text" name="website" placeholder="Website">
                                             </div>
                                         </div>
                                     </div>
@@ -94,14 +95,14 @@
                                         <div class="col-md-6">
                                             <label class="control-label">Phone</label>
                                             <div class="controls">
-                                                <input type="text" placeholder="Phone">
+                                                <input type="text" name="phone" placeholder="Phone">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <label class="control-label">Bio</label>
                                             <div class="controls">
-                                                <textarea rows="3"></textarea>
+                                                <textarea name="bio" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +117,8 @@
                             </div>
 
                             <div class="pd-20" style="position: relative;">
-                                <div class="vd_info tr"> <a class="btn vd_btn btn-xs vd_bg-yellow" data-toggle="collapse" data-target="#profileForm"> <i class="fa fa-pencil append-icon"></i> Edit </a> </div>
+                                <div class="vd_info tr"> <a id="editBtn" class="btn vd_btn btn-xs vd_bg-yellow" data-loading-text="Loading..."> <i class="fa fa-pencil append-icon"></i> Edit </a> </div>
+                                <input type="hidden" name="currentId" value="{{$user->id}}">
                                 <h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="icon-user mgr-10 profile-icon"></i> ABOUT</h3>
                                 <div class="row">
                                     <div class="col-sm-6">
