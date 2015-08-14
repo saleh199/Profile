@@ -17,7 +17,7 @@
     @yield('content')
 </div>
 
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<?php echo Html::script('js/jquery-1.10.2.min.js'); ?>
 
 <!-- Referencing Bootstrap JS that is hosted locally -->
 <?php echo Html::script('js/bootstrap.min.js'); ?>
