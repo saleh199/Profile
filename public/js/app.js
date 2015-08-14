@@ -30,7 +30,7 @@ app = (function(config, $){
                         $btn.button('loading');
                     },
                     error: function(xhr, status){
-                        if(status = 400){
+                        if(status == 400){
                             alert('Not Found User');
                         } else {
                             var errors = xhr.responseJSON;

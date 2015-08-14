@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'DefaultController@index');
-Route::resource('users', 'UserController');
+
+Route::get('users/{id}', 'UserController@getShow');
+Route::put('users/{id}', 'UserController@putUpdate');
