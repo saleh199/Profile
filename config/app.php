@@ -143,7 +143,8 @@ return [
         Profile\Providers\AppServiceProvider::class,
         Profile\Providers\EventServiceProvider::class,
         Profile\Providers\RouteServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -194,7 +195,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Html'      => Collective\Html\HtmlFacade::class,
-        'Form'      => Collective\Html\FormFacade::class
+        'Form'      => Collective\Html\FormFacade::class,
+        'Image'     => Intervention\Image\Facades\Image::class
 
     ],
 
