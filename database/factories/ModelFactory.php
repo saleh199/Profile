@@ -27,3 +27,10 @@ $factory->define(Profile\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(Profile\Post::class, function(Faker\Generator $faker) {
+    return [
+        'content' => $faker->realText(150),
+        'user_id' => 1
+    ];
+});
