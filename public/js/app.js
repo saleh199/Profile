@@ -83,6 +83,35 @@ app = (function(config, $){
                     location = location.href;
                 }
             });
+
+            $('#addPost').click(function(){
+                var $btn = $(this);
+                $.ajax({
+                    url: config.base_url + 'posts',
+                    data: 'user_id=' + $('input[name="currentId"]').val() + '&content=' + $('#postForm textarea[name="content"]').val(),
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/x-www-form-urlencoded',
+                    beforeSend: function(xhr){
+                        $btn.button('loading');
+                    },
+                    error: function(xhr, status){
+                        if(status == 400){
+                            alert('Not Found User');
+                        } else {
+                            var errors = xhr.responseJSON;
+                            $.each(errors, function(index, value){
+                                $('textarea[name="'+index+'"').toggleClass('required vd_bd-red');
+                            });
+                        }
+                    },
+                    success : function(){
+                        location = location.href;
+                    }
+                }).always(function(){
+                    $btn.button('reset');
+                });
+            });
         }
     };
 })(_config, window.jQuery);

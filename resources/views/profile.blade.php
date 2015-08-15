@@ -203,6 +203,18 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <h3 class="mgbt-xs-15 font-semibold"><i class="fa fa-globe mgr-10 profile-icon"></i> Timeline</h3>
+                                        <div class="pd-5">
+                                            <div id="postForm" class="row">
+                                                <div class="col-md-12">
+                                                    <div class="controls">
+                                                        <textarea name="content" rows="3" placeholder="Write your post here :)" required></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12"><button id="addPost" class="btn btn-md vd_btn vd_bg-green">Post</button></div>
+                                            </div>
+                                        </div>
                                         <div class="content-list">
                                             <ul class="list-wrapper">
                                                 <?php foreach($user->posts as $post) { ?>

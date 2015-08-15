@@ -18,7 +18,11 @@ class DefaultController extends Controller
     public function index()
     {
         // Get only one user (ID: 1)
-        $user = User::find(1);
+        $user = User::with([
+            'posts' => function($q){
+                $q->orderBy('created_at', 'desc');
+            }
+        ])->find(1);
 
         return view('profile', [ 'user' => $user ]);
     }
