@@ -200,6 +200,21 @@
                                     </div>
                                 </div>
                                 <hr class="pd-10">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="mgbt-xs-15 font-semibold"><i class="fa fa-globe mgr-10 profile-icon"></i> Timeline</h3>
+                                        <div class="content-list">
+                                            <ul class="list-wrapper">
+                                                <?php foreach($user->posts as $post) { ?>
+                                                <li><span class="menu-text"> <?php echo $post->content; ?>
+                                                        <span class="menu-info"><span class="menu-date"> ~ <?php echo $post->created_at->diffForHumans(); ?> </span></span> </span>  </li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
                             </div>
                             <!-- pd-20 -->
                         </div>
