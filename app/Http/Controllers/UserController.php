@@ -9,6 +9,7 @@ use Profile\User;
 use Profile\Http\Requests;
 use Profile\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -78,6 +79,8 @@ class UserController extends Controller
 
         $image = $this->uploadImage('image', 188, 188, $request);
 
+        File::delete(public_path($user->image));
+
         $user->image = $image;
 
         $user->save();
@@ -109,6 +112,8 @@ class UserController extends Controller
         }
 
         $image = $this->uploadImage('cover_image', 817, 240, $request);
+
+        File::delete(public_path($user->cover_image));
 
         $user->cover_image = $image;
 
