@@ -13,6 +13,18 @@
                     <div class="panel-heading no-title"> </div>
                     <div class="panel-body">
                         <div class="text-center vd_info-parent"> <img alt="example image" src="{{asset($user->image)}}"> </div>
+                        <div class="pd-5">
+                            <a role="button" data-toggle="collapse" href="#personalUploader">
+                                Edit Personal Image
+                            </a>
+                            <div id="personalUploader" class="collapse">
+                                <?php echo Form::open(['url' => route('uploadImage', ['id' => $user->id]), 'id' => 'imageForm', 'enctype' => 'multipart/form-data' ]); ?>
+                                    <input type="file" name="image">
+                                    <span class="help-inline">Max file size: 1MB</span>
+                                    <button type="submit" class="btn btn-block btn-xs vd_btn vd_bg-red">Upload</button>
+                                <?php echo Form::close(); ?>
+                            </div>
+                        </div>
                         <h2 class="font-semibold mgbt-xs-5">{{$user->name}}</h2>
                         <p>{{$user->bio}}</p>
                         <div class="mgtp-20">
@@ -31,7 +43,7 @@
             </div>
 
             <div class="col-sm-9">
-                <div class="cover-image">
+                <div class="cover-image" style="position: relative">
                     <img src="{{asset($user->cover_image)}}" width="100%" height="240px">
                 </div>
                 <div class="tabs widget">
@@ -116,6 +128,22 @@
                                 <hr class="pd-10">
                             </div>
 
+                            <div class="pd-10">
+                                <div>
+                                    <a role="button" data-toggle="collapse" href="#coverUploader" data-parent="#accordion">
+                                        Edit Cover Image
+                                    </a>
+                                </div>
+                                <div id="coverUploader" class="collapse">
+                                    <div class="clearfix">
+                                    <?php echo Form::open([ 'url' => route('uploadCoverImage', ['id' => $user->id]), 'id' => 'coverImageForm', 'enctype' => 'multipart/form-data' ]); ?>
+                                        <div class="col-md-6"><input type="file" name="cover_image">
+                                            <span class="help-inline">Max file size: 1MB</span></div>
+                                        <div class="col-md-3"><button type="submit" class="btn btn-block btn-md vd_btn vd_bg-red">Upload</button></div>
+                                    <?php echo Form::close(); ?>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="pd-20" style="position: relative;">
                                 <div class="vd_info tr"> <a id="editBtn" class="btn vd_btn btn-xs vd_bg-yellow" data-loading-text="Loading..."> <i class="fa fa-pencil append-icon"></i> Edit </a> </div>
                                 <input type="hidden" name="currentId" value="{{$user->id}}">

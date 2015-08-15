@@ -42,6 +42,8 @@ app = (function(config, $){
                 }).done(function(data){
                     // hide edit profile
                     $('#profileEdit').collapse('hide');
+
+                    location = location.href;
                 }).always(function(){
                     $btn.button('reset');
                 });
@@ -64,9 +66,22 @@ app = (function(config, $){
 
                     // show edit profile
                     $('#profileEdit').collapse('toggle');
+
                 }).always(function(){
                     $btn.button('reset');
                 });
+            });
+
+            $('#imageForm').ajaxForm({
+                success : function(){
+                    location = location.href;
+                }
+            });
+
+            $('#coverImageForm').ajaxForm({
+                success : function(){
+                    location = location.href;
+                }
             });
         }
     };

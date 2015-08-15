@@ -21,6 +21,7 @@
 
 <?php echo Html::script('js/jquery-1.10.2.min.js'); ?>
 <?php echo Html::script('js/jquery.populate.js'); ?>
+<?php echo Html::script('js/jquery.form.js'); ?>
 
 <!-- Referencing Bootstrap JS that is hosted locally -->
 <?php echo Html::script('js/bootstrap.min.js'); ?>

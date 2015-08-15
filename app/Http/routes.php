@@ -15,3 +15,5 @@ Route::get('/', 'DefaultController@index');
 
 Route::get('users/{id}', 'UserController@getShow');
 Route::put('users/{id}', 'UserController@putUpdate');
+Route::post('users/{id}/image', ['as' => 'uploadImage', 'uses' => 'UserController@postUploadPersonalImage']);
+Route::post('users/{id}/cover-image', ['as' => 'uploadCoverImage', 'uses' => 'UserController@postUploadCoverImage']);
